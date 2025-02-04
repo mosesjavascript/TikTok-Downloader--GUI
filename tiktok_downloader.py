@@ -1,9 +1,11 @@
 import tkinter as tk
 from tkinter import filedialog, messagebox
 import yt_dlp
+from ttkthemes import ThemedTk
+import ttkbootstrap as ttk
 
 def download_video():
-    url = entry_url.get()
+    url = entry_url.get().strip()
     if not url:
         messagebox.showerror("Error", "Please enter a TikTok video URL")
         return
@@ -14,7 +16,12 @@ def download_video():
     
     ydl_opts = {
         'outtmpl': f'{save_path}/%(title)s.%(ext)s',
-        'format': 'best'
+        'format': 'bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]',  # Ensures best video and audio quality
+        'merge_output_format': 'mp4',
+        'postprocessors': [{
+            'key': 'FFmpegVideoConvertor',
+            'preferedformat': 'mp4',
+        }]
     }
     
     try:
@@ -25,15 +32,19 @@ def download_video():
         messagebox.showerror("Error", f"Failed to download video: {e}")
 
 # GUI Setup
-root = tk.Tk()
+root = ThemedTk(theme="breeze")
 root.title("TikTok Video Downloader")
-root.geometry("400x200")
+root.geometry("450x250")
+root.resizable(False, False)
 
-tk.Label(root, text="Enter TikTok Video URL:").pack(pady=5)
-entry_url = tk.Entry(root, width=50)
+frame = ttk.Frame(root, padding=10)
+frame.pack(fill='both', expand=True)
+
+ttk.Label(frame, text="Enter TikTok Video URL:", font=("Arial", 12)).pack(pady=5)
+entry_url = ttk.Entry(frame, width=55, font=("Arial", 10))
 entry_url.pack(pady=5)
 
-download_btn = tk.Button(root, text="Download Video", command=download_video)
-download_btn.pack(pady=5)
+download_btn = ttk.Button(frame, text="Download Video", command=download_video, bootstyle="primary")
+download_btn.pack(pady=10)
 
 root.mainloop()
