@@ -3,6 +3,7 @@ from tkinter import filedialog, messagebox
 import yt_dlp
 from ttkthemes import ThemedTk
 import ttkbootstrap as ttk
+import os
 
 def download_video():
     url = entry_url.get().strip()
@@ -37,8 +38,15 @@ root.title("TikTok Video Downloader")
 root.geometry("450x250")
 root.resizable(False, False)
 
+# Set icon
+icon_path = "clock.ico"  # Update this with the correct path to your icon file
+if os.path.exists(icon_path):
+    root.iconbitmap(icon_path)
+
 frame = ttk.Frame(root, padding=10)
 frame.pack(fill='both', expand=True)
+
+
 
 ttk.Label(frame, text="Enter TikTok Video URL:", font=("Arial", 12)).pack(pady=5)
 entry_url = ttk.Entry(frame, width=55, font=("Arial", 10))
