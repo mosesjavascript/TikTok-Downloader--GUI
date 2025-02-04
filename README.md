@@ -32,13 +32,13 @@ The following Python libraries are used in this project:
 2. **Install required dependencies** by running the following command:
 
     ```bash
-    pip install yt-dlp ttkthemes ttkbootstrap
+    pip install yt-dlp ttkthemes ttkbootstrap tkinter
     ```
 
 3. **Clone the repository or download the script**:
 
     ```bash
-    git clone https://github.com/yourusername/TikTok-Downloader.git
+    git clone https://github.com/Tarekuzjaman0/TikTok-Downloader.git
     cd TikTok-Downloader
     ```
 
