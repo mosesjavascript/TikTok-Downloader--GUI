@@ -15,7 +15,7 @@ This is a GUI-based TikTok Video Downloader built using Python. The software all
 
 - ## 📸 Screenshots
 
-![TikTok Video Downloader Screenshot](images.png)
+![TikTok Video Downloader Screenshot](image.png)
 
 ### Libraries Used
 
