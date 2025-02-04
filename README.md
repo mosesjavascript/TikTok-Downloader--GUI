@@ -13,6 +13,10 @@ This is a GUI-based TikTok Video Downloader built using Python. The software all
 - Modern UI with `ttkbootstrap` and `ttkthemes`.
 - Custom icon support.
 
+- ## 📸 Screenshots
+
+![TikTok Video Downloader Screenshot](images.png)
+
 ### Libraries Used
 
 The following Python libraries are used in this project:
