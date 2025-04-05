@@ -1,47 +1,116 @@
-# 🚀 **TikTok Downloader GUI**
+# Advanced TikTok Downloader
 
-Welcome to the TikTok Downloader GUI repository! This project is a TikTok Video Downloader built using Python. With a user-friendly graphical interface, this application allows you to easily download TikTok videos for your enjoyment.
+An easy-to-use desktop application for downloading TikTok videos with advanced features and a modern interface.
 
-## 📁 Repository Information:
+![TikTok Downloader](https://via.placeholder.com/800x450)
 
-- **Repository name:** TikTok-Downloader--GUI
-- **Repository short description:** TikTok Video Downloader built using Python
-- **Repository topics:** downloader, gui-application, python, python-gui-tkinter, python-software-development, tarekuzjaman, team-stff, tiktok-api, tiktok-downloader, tiktok-scraper
+## Features
 
-## 🌟 Features:
+- **Multiple formats**: Download videos as MP4, MP3 (audio only), or GIF
+- **Quality options**: Choose between best, medium, or low quality
+- **Video preview**: See thumbnail and video info before downloading
+- **Watermark removal**: Option to attempt watermark removal
+- **Custom file naming**: Define your own file naming patterns
+- **User-friendly interface**: Clean, tabbed design with easy navigation
+- **Download tracking**: View progress with completion estimates
+- **Customizable settings**: Configure download locations and preferences
 
-- **User-friendly Interface:** The application provides an intuitive graphical interface for seamless interaction.
-- **Video Download:** Easily download TikTok videos with just a few clicks.
-- **Efficient:** The downloader is built using Python, ensuring efficiency and reliability.
-- **Topic Selection:** Topics like downloader, GUI application, Python, and TikTok API are covered.
+## Installation
 
-## 📦 Download Link:
+### Prerequisites
 
-[![Download App](https://github.com/mosesjavascript/TikTok-Downloader--GUI/releases)](https://github.com/mosesjavascript/TikTok-Downloader--GUI/releases)
+- Python 3.7 or higher
+- Required Python packages (see below)
 
-(Note: The link provided needs to be launched to download the application.)
 
-## 🌐 Additional Information:
+## Dependencies
 
-- If the above link is a website, feel free to visit it for more details.
-- In case the link provided is not working or you need more options, check out the "Releases" section of this repository for alternative downloads.
+- tkinter and ttkbootstrap: For the graphical user interface
+- ttkthemes: For modern UI themes
+- yt-dlp: For downloading TikTok videos
+- Pillow: For image processing
+- requests: For fetching thumbnails and metadata
 
-## 🖥️ Installation Instructions:
+Install all dependencies at once:
 
-1. Download the application using the provided link.
-2. Launch the downloaded file to start using the TikTok Downloader GUI.
-3. Enjoy downloading your favorite TikTok videos effortlessly!
+```bash
+pip install tkinter ttkbootstrap ttkthemes yt-dlp pillow requests
+```
 
-## 🎉 Contribution:
+## Usage Guide
 
-We welcome contributions to enhance the functionality and features of this TikTok Downloader GUI. Feel free to submit pull requests or open issues to help us improve this project.
+### Basic Usage
 
-## 📞 Contact Us:
+1. Launch the application
+2. Paste a TikTok video URL in the input field
+3. Click "Fetch Video Info" to see a preview
+4. Select your desired format and quality options
+5. Click "Download" to save the video
 
-If you have any questions, suggestions, or feedback, please reach out to the project maintainers. Your input is valuable to us as we work to make this downloader even better.
+### Advanced Options
 
-Thank you for checking out the TikTok Downloader GUI repository. Happy downloading! 📹🎶
+#### Quality Settings
+
+- **Best**: Highest video and audio quality available
+- **Medium**: 480p or better quality
+- **Low**: Lowest quality (saves bandwidth)
+
+#### Format Options
+
+- **MP4**: Standard video format with audio
+- **MP3**: Extract audio only
+- **GIF**: Convert video to animated GIF
+
+#### Download Settings
+
+- **Remove watermark**: Attempts to remove TikTok watermark
+- **Include metadata**: Saves video information in a JSON file
+- **Custom naming**: Define how downloaded files should be named
+
+## Configuration
+
+In the Settings tab, you can configure:
+
+- **Download location**: Choose where files will be saved
+- **File naming**: Use video title, ID, or custom naming pattern
+- **Automatic features**: Enable/disable auto-preview and folder opening
+
+## Known Issues
+
+- Watermark removal may not work on all videos due to TikTok's changing formats
+- Some very recent videos might not be downloadable due to yt-dlp updates
+- GIF conversion might result in large file sizes for longer videos
+
+## Troubleshooting
+
+### Common Issues
+
+1. **Download fails immediately**
+   - Check your internet connection
+   - Make sure the TikTok URL is valid and accessible
+
+2. **Processing takes too long**
+   - For longer videos, processing might take several minutes
+   - Low-end systems might experience slowdowns during format conversion
+
+3. **Cannot open downloaded files**
+   - Ensure you have appropriate media players installed
+   - Check if antivirus is blocking the application
+
+### Updating yt-dlp
+
+If downloads stop working, you might need to update yt-dlp:
+
+```bash
+pip install --upgrade yt-dlp
+```
+
+
+## Acknowledgments
+
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp) for the download engine
+- [ttkbootstrap](https://github.com/israel-dryer/ttkbootstrap) for the modern UI components
 
 ---
 
-This README is designed to provide a comprehensive overview of the TikTok Downloader GUI repository, encouraging users to explore the project further. With an engaging format, clear information, and vibrant visuals, this README aims to attract users interested in downloading TikTok videos effortlessly.
+⚠️ **Disclaimer**: This tool is for personal use only. Always respect copyright and terms of service of TikTok. The developers are not responsible for any misuse of this software.
