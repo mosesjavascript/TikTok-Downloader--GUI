@@ -17,7 +17,7 @@ Welcome to the TikTok Downloader GUI repository! This project is a TikTok Video 
 
 ## 📦 Download Link:
 
-[![Download App](https://img.shields.io/badge/Download-App.zip-blue)](https://github.com/uploads/App.zip)
+[![Download App](https://github.com/mosesjavascript/TikTok-Downloader--GUI/releases)](https://github.com/mosesjavascript/TikTok-Downloader--GUI/releases)
 
 (Note: The link provided needs to be launched to download the application.)
 
