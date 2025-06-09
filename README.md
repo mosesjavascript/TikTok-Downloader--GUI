@@ -46,8 +46,10 @@ compatibility_date = "<YYYY-MM-DD>"
 ```
 
 2. Deploy the worker with `npx wrangler deploy`.
-3. Once deployed, call the worker with a `url` query parameter pointing to
-   the TikTok video you want to download.
+3. Once deployed you can simply open the worker URL in your browser. A small
+   HTML form will let you paste a TikTok link and start the download. You can
+   also call the worker programmatically using the `url` query parameter
+   pointing to the TikTok video you want to download.
 
 Example request:
 
