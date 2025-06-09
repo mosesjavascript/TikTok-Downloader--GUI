@@ -32,6 +32,38 @@ Welcome to the TikTok Downloader GUI repository! This project is a TikTok Video 
 2. Launch the downloaded file to start using the TikTok Downloader GUI.
 3. Enjoy downloading your favorite TikTok videos effortlessly!
 
+## 🌩️ Cloudflare Worker API
+
+This repository includes a `worker.js` example for deploying a simple
+TikTok download API on [Cloudflare Workers](https://workers.cloudflare.com/).
+
+1. Create a `wrangler.toml` file so Wrangler knows about the worker:
+
+```toml
+name = "tiktok-downloader-worker"
+main = "worker.js"
+compatibility_date = "<YYYY-MM-DD>"
+```
+
+2. Deploy the worker with `npx wrangler deploy`.
+3. Once deployed, call the worker with a `url` query parameter pointing to
+   the TikTok video you want to download.
+
+Example request:
+
+```text
+https://<your-worker-url>?url=https://www.tiktok.com/@user/video/12345
+```
+
+The worker responds with a JSON payload containing a direct link to the video:
+
+```json
+{
+  "download": "https://...mp4"
+}
+```
+
+
 ## 🎉 Contribution:
 
 We welcome contributions to enhance the functionality and features of this TikTok Downloader GUI. Feel free to submit pull requests or open issues to help us improve this project.
